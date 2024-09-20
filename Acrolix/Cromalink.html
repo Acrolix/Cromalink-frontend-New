@@ -16,7 +16,7 @@
             <br>
             <a href="mensajes.html"><i class="fas fa-envelope"></i>messege</a>
             <br>
-            <a href="envios.html"><i class="fas fa-paper-plane"></i>share</a>
+            <a href=""><i class="fas fa-paper-plane"></i>share</a>
             <hr class="linea_punteada">
             <div class="debajo_punteada">
                 <a href="grupos.html"><i class="fas fa-address-book"></i>grupos</a>
@@ -45,6 +45,17 @@
             if(userConfirmed){
                 location.href = 'login.html';
             }
+        }
+
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        const mensaje = getQueryParam('mensaje');
+
+        if (mensaje) {
+            alert(mensaje);
         }
     </script>
 </body>
