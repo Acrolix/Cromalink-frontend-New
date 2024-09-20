@@ -16,7 +16,7 @@
             <br>
             <a href="mensajes.html"><i class="fas fa-envelope"></i>messege</a>
             <br>
-            <a href="envios.html"><i class="fas fa-paper-plane"></i>share</a>
+            <a href=""><i class="fas fa-paper-plane"></i>share</a>
             <hr class="linea_punteada">
             <div class="debajo_punteada">
                 <a href="grupos.html"><i class="fas fa-address-book"></i>grupos</a>
@@ -32,4 +32,28 @@
             <div class="flecha">
                 <a href="Cromalink.html"><i class="fas fa-arrow-left"></i></a>
             </div>
+
+            <div class="upload-section">
+                <h3>Subir Archivo o Escribir</h3>
+                <form id="uploadForm" onsubmit="return handleSubmit(event)">
+                    <label for="fileInput">Selecciona un video o una foto:</label>
+                    <input type="file" id="fileInput" name="fileInput" accept="image/*,video/*" required>
+                    <br><br>
+                    <label for="textInput">Escribe algo:</label>
+                    <textarea id="textInput" name="textInput" rows="4" cols="50" placeholder="Escribe tu texto aquí..."></textarea>
+                    <br><br>
+                    <button type="submit">Subir</button>
+                </form>
+            </div>
         </div>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); 
+            
+            location.href = `Cromalink.html?mensaje= "Ocurrio un error inesperado, intentelo otro dia"`;
+        }
+    </script>
+</body>
+</html>
